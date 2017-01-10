@@ -16,6 +16,8 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifi
  * @author Marco Dondio
  *
  *e aggiunto anche terzo commento
+ *
+ *siamo nel ramo dei commenti
  */
 public class WatsonBinaryClassificationResult {
 
