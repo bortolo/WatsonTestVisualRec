@@ -9,6 +9,8 @@ public class ImageRecognitionConfig {
 	
 	//COMMENTO DI PROVA
 
+	// secondo commento di prova.....funzion?
+	
 	// Luca credenziali
 	public static final String api_key = "a40fce6329c185129d0d6ac72f4a4b22d23ffba1";
 
