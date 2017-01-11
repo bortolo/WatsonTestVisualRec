@@ -85,14 +85,14 @@ public class SingleTest {
 
 		// ----------------------------------------------------------------------------------------------------------
 
-		// Retrieve our classifier and get detail
-		// WatsonBinaryClassifier classifier = new WatsonBinaryClassifier();
-		// classifier.setClassifierId("watch_classifier_1872144544");
-		// classifier.setLabel(label);
-		//
-		// System.out.println(classifier.getModelDetail());
+//		 //Retrieve our classifier and get detail
+//		 WatsonBinaryClassifier classifier = new WatsonBinaryClassifier();
+//		 classifier.setClassifierId("watch_classifier_1872144544");
+//		 classifier.setLabel(label);
+//		
+//		 System.out.println(classifier.getModelDetail());
 
-		// ----------------------------------------------------------------------------------------------------------
+		 // ----------------------------------------------------------------------------------------------------------
 		// Sezione di test
 
 		WatsonBinaryClassifier classifier = new WatsonBinaryClassifier();
@@ -155,6 +155,12 @@ public class SingleTest {
 		
 		
 		 }
+		 
+		 		 
+		 System.out.println("*********************************");
+		 System.out.println("AUC: " + df.format(TrepezoidiInteger(tprs,fprs)));
+		 System.out.println("*********************************");
+		 
 		 out.println(buildJSON(tprs, fprs));
 		
 		 out.close();
@@ -324,4 +330,22 @@ public class SingleTest {
 		return obj;
 
 	}
+	
+	private static double TrepezoidiInteger(List<Double> tprs, List<Double> fprs){
+		
+		double AUC = 0.0;
+		
+		for (int i = 0; i< (fprs.size()-1) ; i++)
+		{
+			double x_a = fprs.get(i);
+			double x_b = fprs.get(i+1);
+			double a = tprs.get(i);
+			double b = tprs.get(i+1);
+			
+			AUC+=((b+a)*(x_b-x_a)/2);
+		}
+				
+		return AUC;		
+	}
+	
 }
