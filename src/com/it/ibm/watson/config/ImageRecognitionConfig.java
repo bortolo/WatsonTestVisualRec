@@ -11,5 +11,5 @@ public class ImageRecognitionConfig {
 	public static final String api_key = "a40fce6329c185129d0d6ac72f4a4b22d23ffba1";
 
 	// Andrea credenziali
-//	public static final String api_key = "db57c99c1cb2fd47e15e4625c4c0b726cc38f40e";
+	//public static final String api_key = "db57c99c1cb2fd47e15e4625c4c0b726cc38f40e";
 }

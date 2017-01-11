@@ -32,7 +32,7 @@ import com.it.ibm.watson.visualrecframework.WatsonBinaryClassificationResult.MET
 public class SingleTest {
 
 	public static final int STOP_TRAINING = 500; // num of pos or neg elems
-	public static final int STOP_TEST = 25; // num of pos or neg elems
+	public static final int STOP_TEST = 100; // num of pos or neg elems
 
 	public static final int CLASSIFYMAXIMAGES = 20;	// max number of images per call
 	
@@ -42,7 +42,8 @@ public class SingleTest {
 	// XXX importante: test max 10 è significativo, perchè in una chiamata
 	// classify al max ne prende 20.. capire meglio
 
-	public static final String BASEFOLDER = "visualrecframework/watsondatasetsnew/";
+	public static final String BASEFOLDER = "C:/Users/IBM_ADMIN/Box Sync/WATSON experiments/Datasets di riferimento/Ready/";
+	//public static final String BASEFOLDER = "visualrecframework/watsondatasetsnew/";
 	public static final String label = "watch";
 
 	// Classificatore Luca: watch_classifier_1872144544
@@ -119,12 +120,12 @@ public class SingleTest {
 
 
 		 // Compute results and metrics
-		 double minThreshold = 0.05;
-		 double maxThreshold = 0.6;
-		 double step = 0.05;
+		 double minThreshold = 0.01;
+		 double maxThreshold = 0.99;
+		 double step = 0.01;
 		
 		 PrintWriter out = new PrintWriter(new BufferedWriter(
-		 new FileWriter(label + "_training-" + 2 * STOP_TRAINING + "_test-" +
+		 new FileWriter("C:/Users/IBM_ADMIN/Box Sync/WATSON experiments/Output/" + label + "_training-" + 2 * STOP_TRAINING + "_test-" +
 		 2 * STOP_TEST + ".json")));
 		
 		// out.println("threshold, tpr, fpr");
